@@ -1,4 +1,4 @@
-Demo – Flexible Demand in the European Day-Ahead Electricity Market
+# Demo – Flexible Demand in the European Day-Ahead Electricity Market
 
 This folder contains a small-scale demonstration of a flexible demand model for the European day-ahead electricity market.
 The demo allows users to quickly run the optimization and see how demand flexibility affects market prices, generation schedules, and social welfare.
