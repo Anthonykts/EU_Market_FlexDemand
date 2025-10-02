@@ -48,32 +48,31 @@ The European market is typically cleared based on hourly price-quantity bids, wh
 
 ## 🏗️ Project Structure
 
+
 ```bash
 EU_Market_FlexDemand/
-│
 ├── README.md
 ├── LICENSE
 │
-demo/
-├── code/
-│   └── Eumarket_flexdemand_demo.py
-├── input/
-│   └── flexi.xlsx
-├── output/
-│   ├── eu_market_results.xlsx
-│   └── sensitivity_analysis/
-└── README.md
+├── demo/
+│   ├── README.md           
+│   ├── code/
+│   │   └── Eumarket_flexdemand_demo.py
+│   ├── input/
+│   │   └── flexi.xlsx
+│   └── output/
+│       ├── eu_market_results.xlsx
+│       └── sensitivity_analysis/
 │
 └── main/
-├── code/
-│ ├── main.py
-│ └── utils.py
-├── input/
-│ └── ENTSO-E_data_MODIFIED.png
-├── output/
-│ ├── results.xlsx
-│ └── plots/
-└── README.md
+    ├── code/
+    │   └── GR-MARKET_FLEXDEMAND.py
+    ├── input/
+    │   └── ENTSO-E_data_MODIFIED.png
+    └── output/
+        ├── Sensitive Analysis on Discomfort Cost
+        └── Sensitive Analysis on flexibility factor
+
 ```
 ---
 
