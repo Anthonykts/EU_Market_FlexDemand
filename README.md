@@ -21,14 +21,15 @@ EU_Market_FlexDemand/
 ├── README.md
 ├── LICENSE
 │
-├── demo/
-│ ├── code/
-│ │ └── demo.py
-│ ├── input/
-│ │ └── flexi.xlsx
-│ ├── output/
-│ │ └── results_demo.xlsx
-│ └── README.md
+demo/
+├── code/
+│   └── Eumarket_flexdemand_demo.py
+├── input/
+│   └── flexi.xlsx
+├── output/
+│   ├── eu_market_results.xlsx
+│   └── sensitivity_analysis/
+└── README.md
 │
 └── main/
 ├── code/
