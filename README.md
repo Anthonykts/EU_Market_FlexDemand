@@ -36,7 +36,7 @@ Optional discomfort cost parameters allow quantifying the trade-off between cost
 
 The European market is typically cleared based on hourly price-quantity bids, where participants submit their supply and demand offers for each hour. To incorporate demand flexibility, the model allows shifting part of the demand from high-price hours to low-price hours without changing the total daily energy consumption. This shift is energy-neutral, meaning total consumption over the day remains constant, but the timing of consumption can adapt to market conditions.
 
-## Key Feature
+## 🔎 Key Elements  
 
 - **Demand Flexibility Parameter (αd):** Maximum fraction of baseline demand that can be shifted across hours.  
 - **Discomfort Costs:** Optional penalties that model the inconvenience of shifting consumption from preferred hours.  
@@ -72,7 +72,6 @@ EU_Market_FlexDemand/
     └── output/
         ├── Sensitive Analysis on Discomfort Cost
         └── Sensitive Analysis on flexibility factor
-
 ```
 ---
 
@@ -86,12 +85,12 @@ For privacy reasons, the full input Excel file cannot be shared. Instead, a scre
 
 The model optimizes hourly generation schedules, shifted demand, and social welfare, respecting energy neutrality constraints, providing insights into how flexible demand affects the Greek day-ahead market.
 
-## Demo Overview
+## 🧪 Demo Overview
 
 The demo provides a small-scale, self-contained illustration of the flexible demand model. It allows users to quickly explore how shifting demand (through the flexibility parameter α) affects market prices, generation schedules, and social welfare. The demo is ideal for educational purposes, testing different flexibility scenarios, or verifying the model workflow on a lightweight dataset. Results from the demo, including sensitivity analysis for α, are available in the Demo/output/ and Demo/output/sensitivity_analysis/ folder.
 
 
-## Summary
+## 📌 Summary
 
 The model allows shifting part of the baseline demand from high-price hours to low-price hours without changing the total daily consumption. This shift is energy-neutral, maintaining total consumption over the day while adapting the timing of consumption to market conditions. By including parameters such as α (maximum fraction of shiftable demand) and optional discomfort costs, the model provides a flexible, general, and agnostic framework to study the effects of demand flexibility on market prices, generation schedules, and social welfare in the European day-ahead electricity market.
 
