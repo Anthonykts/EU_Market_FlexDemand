@@ -1,4 +1,4 @@
-# Flexible Demand in the European Day-Ahead Electricity Market – Enhanced Overview
+# Flexible Demand in the European Day-Ahead Electricity Market 
 
 This project focuses on the role of flexible demand in the European day-ahead wholesale electricity market, with a detailed case study for the Greek market on May 17, 2024. The main feature of the model is that it is general and agnostic, meaning it does not rely on specific technical characteristics of individual loads or consumers. This provides high flexibility in analysis and allows its application across different scenarios and markets without requiring detailed technical data for each load.
 
@@ -104,7 +104,15 @@ The model allows shifting part of the baseline demand from high-price hours to l
 - xlsxwriter / openpyxl – Excel file export and read
 - GLPK / CBC / Gurobi – Linear/Mixed-Integer solvers
 
+  
 ## 📄 License / Credits
 
-This project is provided for educational and research purposes. You are free to use, modify, and share it under the MIT License. See the LICENSE file for details.
-The code and models were developed as part of a study on flexible demand in the European day-ahead electricity market.
+This project is provided for educational and research purposes. You are free to use, modify, and share it under the MIT License. See the LICENSE file for details.  
+
+The code and models were developed as part of the **Diploma Thesis titled _"Analysis of the Impact of Flexible Demand on the Day-Ahead Wholesale Electricity Market"_**, conducted at the **University of Patras**, School of Electrical and Computer Engineering.  
+
+The research focuses on the **optimization and market integration of flexible demand** in **modern Day-Ahead Wholesale Electricity Markets**, analyzing both **European (simple bidding)** and **U.S. (complex bidding)** market mechanisms. It examines how different clearing strategies can incorporate time flexibility of demand, assess their impact on market efficiency, system operation, and social welfare, and proposes optimal frameworks that account for temporal coupling constraints.
+
+![Python Version](https://img.shields.io/badge/python-3.8+-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+
