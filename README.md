@@ -1,6 +1,34 @@
-# Flexible Demand in the European Day-Ahead Electricity Market 
+# ⚡ Flexible Demand in the European Day-Ahead Electricity Market
 
-This project focuses on the role of flexible demand in the European day-ahead wholesale electricity market, with a detailed case study for the Greek market on May 17, 2024. The main feature of the model is that it is general and agnostic, meaning it does not rely on specific technical characteristics of individual loads or consumers. This provides high flexibility in analysis and allows its application across different scenarios and markets without requiring detailed technical data for each load.
+This project focuses on the role of **flexible demand** in the **European day-ahead wholesale electricity market**, with a detailed case study for the **Greek market (May 17, 2024)**.  
+The model is **general and agnostic**, meaning it does not rely on specific technical characteristics of individual loads or consumers.  
+This approach enables scenario-based analyses and the evaluation of different demand response strategies **without needing detailed consumer-level data**.
+
+---
+
+## 📑 Table of Contents
+1. [Introduction](#introduction)
+2. [Key Features](#key-features)
+3. [Model Overview](#model-overview)
+4. [Benefits of the General and Agnostic Approach](#benefits-of-the-general-and-agnostic-approach)
+5. [Key Model Components](#key-model-components)
+6. [Project Structure](#project-structure)
+7. [Main Project Overview](#main-project-overview)
+8. [Demo Overview](#demo-overview)
+9. [Summary](#summary)
+10. [Requirements](#requirements)
+11. [Dependencies](#dependencies)
+12. [License / Credits](#license--credits)
+
+---
+
+## 🧩 Introduction
+The **European Day-Ahead Market** clears electricity generation and consumption based on hourly price–quantity bids.  
+This project integrates **flexible demand** into that framework, enabling consumers to **shift part of their consumption** from high-price hours to low-price hours while maintaining **total energy neutrality**.
+
+The goal is to **maximize social welfare** — the combined economic benefit of consumers and producers — while considering **production costs** and **discomfort costs** from shifting consumption.
+
+---
 
 ## 🔑 Key Features of the General Model
 
@@ -32,6 +60,8 @@ Optional discomfort cost parameters allow quantifying the trade-off between cost
 - Policy analysis capabilities: Suitable for system operators, regulators, or governments to evaluate the impact of flexible demand on market stability and social welfare
 - Educational and research tool: Ideal for teaching, research simulations, and scenario analysis
 
+---
+
 ## 📌 Model Overview
 
 The European market is typically cleared based on hourly price-quantity bids, where participants submit their supply and demand offers for each hour. To incorporate demand flexibility, the model allows shifting part of the demand from high-price hours to low-price hours without changing the total daily energy consumption. This shift is energy-neutral, meaning total consumption over the day remains constant, but the timing of consumption can adapt to market conditions.
@@ -45,9 +75,27 @@ The European market is typically cleared based on hourly price-quantity bids, wh
 - **Sensitivity Analysis:** Study how varying α affects market outcomes, prices, and social welfare.
 
 ---
+## 🌟 Benefits of the General and Agnostic Approach
+
+- **Multi-market applicability:** Can be applied to Greece, other EU markets, or beyond without modification.  
+- **Policy relevance:** Helps regulators evaluate the impact of flexibility on market stability and welfare.  
+- **Educational utility:** Ideal for teaching and research simulations of flexibility and demand response.  
+
+---
+
+## ⚙️ Key Model Components
+
+| Element | Description |
+|----------|-------------|
+| **αd (Flexibility Parameter)** | Maximum fraction of baseline demand that can be shifted across hours |
+| **Discomfort Cost (Bd)** | Monetary penalty for deviating from preferred consumption hours |
+| **Objective Function** | Maximize social welfare (consumer + producer surplus) |
+| **Energy Neutrality** | Ensures total daily energy remains constant |
+| **Decision Variables** | Hourly generation, demand shifts, and prices |
+
+---
 
 ## 🏗️ Project Structure
-
 
 ```bash
 EU_Market_FlexDemand/
@@ -75,15 +123,47 @@ EU_Market_FlexDemand/
 ```
 ---
 
-## 📄 Main Project Overview
+## 🔍 Main Project Overview
 
-The main project demonstrates the flexible demand model using real market data from the Greek day-ahead electricity market for May 17, 2024. To capture demand flexibility and consumer preferences, three additional columns were added to the input dataset:
-- Flexibility parameter (α)
-- Optional discomfort costs for shifting consumption
+The **main model** applies the flexible demand framework to the **Greek Day-Ahead Electricity Market (May 17, 2024)**, using real market data from **ENTSO-E**.  
+To represent demand flexibility and consumer behavior, three additional fields were introduced in the input dataset:
 
-For privacy reasons, the full input Excel file cannot be shared. Instead, a screenshot of the first few rows of the dataset is provided for reference, illustrating the structure of the data, the flexibility parameters, and the cost information. This allows users to replicate the workflow with their own data if desired.
+- **α (Flexibility Parameter):** Maximum fraction of demand that can be shifted across hours  
+- **Bd_sh_AWAY (Discomfort Cost – Away from preferred hours):** Penalty for reducing consumption in preferred periods  
+- **Bd_sh_TOWARDS (Discomfort Cost – Towards preferred hours):** Penalty for increasing consumption in non-preferred periods  
 
-The model optimizes hourly generation schedules, shifted demand, and social welfare, respecting energy neutrality constraints, providing insights into how flexible demand affects the Greek day-ahead market.
+---
+
+### ⚙️ Model Functionality
+The optimization model:
+- **Determines hourly generation schedules** under market equilibrium  
+- **Identifies shifted demand patterns** while maintaining total daily energy neutrality  
+- **Maximizes social welfare**, defined as the sum of consumer and producer surplus  
+- **Quantifies trade-offs** between market efficiency and consumer discomfort  
+
+> ⚖️ **Energy Neutrality Constraint:**  
+> Total daily demand remains constant — only the timing of consumption is adjusted across hours.
+
+---
+
+### 🧾 Data and Privacy
+For confidentiality reasons, the **full input Excel dataset** is not publicly shared.  
+Instead, a **data screenshot** is provided to illustrate the input structure, showing:
+- Baseline demand  
+- Flexibility parameters (α)  
+- Discomfort costs (Bd_sh_AWAY, Bd_sh_TOWARDS)  
+
+This enables other users to **replicate the workflow** with their own data and explore flexibility scenarios.
+
+---
+
+### 📊 Insights
+The model provides key insights into:
+- How **temporal demand flexibility** influences market prices  
+- The impact of **consumer discomfort costs** on participation and welfare  
+- The **balance** between economic efficiency and behavioral realism  
+
+It forms the foundation for comparative analyses across **European** and **U.S. market structures** within the thesis.
 
 ## 🧪 Demo Overview
 
@@ -104,7 +184,8 @@ The model allows shifting part of the baseline demand from high-price hours to l
 - xlsxwriter / openpyxl – Excel file export and read
 - GLPK / CBC / Gurobi – Linear/Mixed-Integer solvers
 
-  
+---
+
 ## 📄 License / Credits
 
 This project is provided for educational and research purposes. You are free to use, modify, and share it under the MIT License. See the LICENSE file for details.  
