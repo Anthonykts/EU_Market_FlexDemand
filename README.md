@@ -177,6 +177,13 @@ It forms the foundation for comparative analyses across **European** and **U.S. 
 
 The demo provides a small-scale, self-contained illustration of the flexible demand model. It allows users to quickly explore how shifting demand (through the flexibility parameter α) affects market prices, generation schedules, and social welfare. The demo is ideal for educational purposes, testing different flexibility scenarios, or verifying the model workflow on a lightweight dataset. Results from the demo, including sensitivity analysis for α, are available in the Demo/output/ and Demo/output/sensitivity_analysis/ folder.
 
+All demo-related files are contained in the `demo/` folder:
+- `demo/code/` contains the main script `Eumarket_flexdemand_demo.py`.  
+- `demo/input/` includes the sample input file `flexi.xlsx`.  
+- `demo/output/` stores the demo results (`results_demo.xlsx`) and a `sensitivity_analysis/` folder with results from varying α.  
+
+Users can run the demo to quickly observe the effect of demand flexibility on market outcomes and social welfare.
+
 ## Case Studies & Results  
 
 This section presents the results of two sensitivity analyses conducted on the **Greek Day-Ahead Market (May 17, 2024)**:  
