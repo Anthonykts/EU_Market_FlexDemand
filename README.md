@@ -173,6 +173,8 @@ The model provides key insights into:
 
 It forms the foundation for comparative analyses across **European** and **U.S. market structures** within the thesis.
 
+---
+
 ## Demo Overview
 
 The demo provides a small-scale, self-contained illustration of the flexible demand model. It allows users to quickly explore how shifting demand (through the flexibility parameter α) affects market prices, generation schedules, and social welfare. The demo is ideal for educational purposes, testing different flexibility scenarios, or verifying the model workflow on a lightweight dataset. Results from the demo, including sensitivity analysis for α, are available in the Demo/output/ and Demo/output/sensitivity_analysis/ folder.
@@ -183,6 +185,8 @@ All demo-related files are contained in the `demo/` folder:
 - `demo/output/` stores the demo results (`results_demo.xlsx`) and a `sensitivity_analysis/` folder with results from varying α.  
 
 Users can run the demo to quickly observe the effect of demand flexibility on market outcomes and social welfare.
+
+---
 
 ## Case Studies & Results  
 
@@ -197,8 +201,6 @@ The purpose of these analyses is to examine how variations in demand flexibility
 ### Case Study 1 – Sensitivity Analysis on Flexibility Factor (α)
 
 This study analyzes how increasing the flexibility parameter (α) — the maximum share of baseline demand that can be shifted across hours — influences market outcomes, electricity prices, and welfare.
-
----
 
 #### Key Figures  
 *(all figures generated from `main/output/Sensitive Analysis on flexibility factor/` folder)*  
@@ -237,8 +239,6 @@ The results confirm that moderate demand flexibility (**α ≈ 0.3–0.5**) yiel
 ### Case Study 2 – Sensitivity Analysis on Discomfort Costs (Bd_sh_AWAY / Bd_sh_TOWARDS)
 
 This case study examines how discomfort costs — the penalties reflecting consumers’ aversion to shifting consumption — affect the degree of flexibility and overall market performance.
-
----
 
 #### Key Figures  
 *(all figures generated from `main/output/Sensitive Analysis on Discomfort Cost/` folder)*  
