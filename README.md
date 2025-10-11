@@ -229,8 +229,6 @@ This study analyzes how increasing the flexibility parameter (α) — the maximu
 - **Consumer utility** increases, as more flexible consumption captures price advantages.  
 - **Social welfare** improves significantly for α ≤ 0.5 and then stabilizes, showing diminishing marginal benefits.
 
----
-
 #### Summary
 The results confirm that moderate demand flexibility (**α ≈ 0.3–0.5**) yields the most efficient and stable market outcomes, achieving a balance between price smoothing and consumer comfort. Higher α values provide limited additional benefits.
 
@@ -239,6 +237,8 @@ The results confirm that moderate demand flexibility (**α ≈ 0.3–0.5**) yiel
 ### Case Study 2 – Sensitivity Analysis on Discomfort Costs (Bd_sh_AWAY / Bd_sh_TOWARDS)
 
 This case study examines how discomfort costs — the penalties reflecting consumers’ aversion to shifting consumption — affect the degree of flexibility and overall market performance.
+
+---
 
 #### Key Figures  
 *(all figures generated from `main/output/Sensitive Analysis on Discomfort Cost/` folder)*  
@@ -267,8 +267,6 @@ This case study examines how discomfort costs — the penalties reflecting consu
 - **Producer profits** **increase**, as less flexible demand reduces competition on the supply side.  
 - **Consumer utility** declines due to lower participation in flexibility schemes.  
 - **Social welfare** decreases with higher Bd, illustrating the trade-off between **economic efficiency** and **consumer comfort**.  
-
----
 
 #### Summary
 At higher discomfort cost levels (**Bd > 15 €/MWh**), flexibility participation drops sharply, resulting in reduced welfare gains.  
