@@ -14,7 +14,7 @@
 8. [Case Studies & Results](#case-studies--results)  
    - [Case Study 1 – Sensitivity Analysis on Flexibility Factor (α)](#case-study-1--sensitivity-analysis-on-flexibility-factor-α)  
    - [Case Study 2 – Sensitivity Analysis on Discomfort Costs (Bd_sh_away--bd_sh_towards)](#case-study-2--sensitivity-analysis-on-discomfort-costs-bd_sh_away--bd_sh_towards)  
-9. [Summary](#summary)  
+9. [General Model Summary](#general-model-summary) 
 10. [Requirements & Dependencies](#dependencies)  
 11. [License / Credits](#license--credits)
 
@@ -198,14 +198,6 @@ The purpose of these analyses is to examine how variations in demand flexibility
 
 This study analyzes how increasing the flexibility parameter (α) — the maximum share of baseline demand that can be shifted across hours — influences market outcomes, electricity prices, and welfare.
 
-#### Key Observations
-- As **α increases**, demand becomes smoother across hours, reducing consumption peaks.  
-- **Electricity prices** stabilize, showing reduced volatility and a flatter price profile.  
-- **Shifted load** indicates redistribution of consumption from high-price to low-price hours.  
-- **Producer profits decrease** as higher flexibility lowers market prices and reduces producer revenue.  
-- **Consumer utility** increases, as more flexible consumption captures price advantages.  
-- **Social welfare** improves significantly for α ≤ 0.5 and then stabilizes, showing diminishing marginal benefits.
-
 ---
 
 #### Key Figures  
@@ -277,13 +269,14 @@ This case study examines how discomfort costs — the penalties reflecting consu
 - **Social welfare** decreases with higher Bd, illustrating the trade-off between **economic efficiency** and **consumer comfort**.  
 
 ---
+
 #### Summary
 At higher discomfort cost levels (**Bd > 15 €/MWh**), flexibility participation drops sharply, resulting in reduced welfare gains.  
 An optimal range is observed for **Bd ≤ 10–15 €/MWh**, where both welfare and consumer satisfaction are balanced.
 
 ---
 
-## Summary
+## General Model Summary
 
 The model allows shifting part of the baseline demand from high-price hours to low-price hours without changing the total daily consumption. This shift is energy-neutral, maintaining total consumption over the day while adapting the timing of consumption to market conditions. By including parameters such as α (maximum fraction of shiftable demand) and optional discomfort costs, the model provides a flexible, general, and agnostic framework to study the effects of demand flexibility on market prices, generation schedules, and social welfare in the European day-ahead electricity market.
 
